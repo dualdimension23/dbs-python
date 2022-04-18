@@ -1,0 +1,4 @@
+/modules/instantclient*
+.env
+.ipynb_checkpoints
+DBConnection.ipynb
