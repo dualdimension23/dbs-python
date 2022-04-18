@@ -11,7 +11,7 @@ env.prefix.append("ORACLE_")
 
 class OracleDatabase(Database):
     def __init__(self):
-        cx_Oracle.init_oracle_client(lib_dir=env.str("INSTANT_CLIENT_PATH"))
+        cx_Oracle.init_oracle_client(lib_dir=env.str("INSTANT_CLIENT_PATH") + env.str("INSTANT_CLIENT_VERSION"))
         self.connection: Union[cx_Oracle.Connection, None] = None
         self.cursor: Any = None
 
